@@ -1,4 +1,4 @@
-package chap2;
+package chap2.test;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,6 @@
 package collection.framework;
 
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -26,6 +24,7 @@ public class MapStudy {
 		map.put(6, "Iniesta");
 		map.put(7, "Villa");
 		map.put(null, null);
+		
 
 		System.out.println("Sixe of map: " + map.size());
 		System.out.println("Content of HashMap: " + map);
@@ -36,6 +35,13 @@ public class MapStudy {
 		for (Entry<Integer, String> entry : mapEntry) {
 			System.out.println("Key : " + entry.getKey() + "  value: " + entry.getValue());
 		}
+		
+		map.computeIfAbsent(100, k -> "computed key");
+		
+		for (Entry<Integer, String> entry : mapEntry) {
+			System.out.println("Key : " + entry.getKey() + "  value: " + entry.getValue());
+		}
+		
 
 	}
 

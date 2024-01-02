@@ -14,15 +14,14 @@ public class TestTrywithResource {
 
 	public static void main(String args[]) {
 		
-		String filename="C:\\Users\\Luis_Rocha1\\Documents\\workspace-spring-tool-suite-4-4.14.1.RELEASE\\Java8\\src\\rocha.zip";
+		String filename="C:\\proyetos-javas\\rocha.zip";
 	    Path pathToFile = Paths.get(filename);
-	    
 	    
 	    System.out.println(pathToFile.getFileName());
 	    
 		
 		try {
-			TestTrywithResource.writeToFileZipFileContents(filename, "rocha.txt");
+			TestTrywithResource.writeToFileZipFileContents(filename, "rocha44.txt");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

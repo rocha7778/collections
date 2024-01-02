@@ -16,7 +16,7 @@ public class GroubyJava7vsJava8 {
 		
 		System.out.println("Numero "+ numero + " boolean "+trueOfalse);
 		
-		List<Employee> employees = new ArrayList();
+		List<Employee> employees = new ArrayList<>();
 		
 		Employee e1 = new Employee();
 		Employee e2 = new Employee();

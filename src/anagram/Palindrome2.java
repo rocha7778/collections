@@ -1,11 +1,15 @@
 package anagram;
 
+import java.util.ArrayList;
+
 public class Palindrome2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		isPalindrome("Anita lava la tina");
+		
+	
 
 	}
 
