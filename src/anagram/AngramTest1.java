@@ -13,7 +13,12 @@ public class AngramTest1 {
 
 		Function<String, List<String>> function = w -> {
 
-			return w.lines().map(word -> word.split("")).flatMap(Arrays::stream).sorted().collect(Collectors.toList());
+			return w.
+					lines()
+					.map(word -> word.split(""))
+					.flatMap(Arrays::stream)
+					.sorted()
+					.collect(Collectors.toList());
 
 		};
 

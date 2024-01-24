@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CollectorToMap {
 	
@@ -17,6 +18,8 @@ public class CollectorToMap {
 		bookList.add(new Book("The Fellowship of the Ring", 1954, "0395489318"));
 		bookList.add(new Book("The Two Towers", 1954, "0345339711"));
 		bookList.add(new Book("The Return of the King", 1955, "0618129111"));
+		
+		
 		
 		
 		Map<String, String> booksByIsbn = bookList.stream().collect(Collectors.toMap(Book::getIsbn, Book::getName));

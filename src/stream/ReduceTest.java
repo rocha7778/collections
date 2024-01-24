@@ -2,6 +2,7 @@ package stream;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ReduceTest {
 
@@ -14,6 +15,9 @@ public class ReduceTest {
 		var total2 = listNumbers.stream().mapToInt(e-> e).sum();
 		System.out.println(total);
 		System.out.println(total2);
+		
+		
+		Stream.iterate(0, n-> n <= 10, n-> n + 1).forEach(System.out::println);
 		
 		
 	}

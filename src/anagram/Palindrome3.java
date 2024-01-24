@@ -1,6 +1,6 @@
 package anagram;
 
-public class Palindrome {
+public class Palindrome3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -10,16 +10,16 @@ public class Palindrome {
 	}
 
 	public static void isPalindrome(String word) {
-		
+
 		String cleanWord = word.replaceAll("\\W", "").toLowerCase();
 
 		cleanWord = cleanWord.replace("\\s+", "").toLowerCase();
 
-		StringBuilder sb = new StringBuilder(cleanWord);
-		String reversedWord = sb.reverse().toString();
-		
-		if(cleanWord.equalsIgnoreCase(reversedWord)) {
-			System.out.println("paolindrome");
+		String reversedWord = new StringBuilder(cleanWord).reverse().toString();
+
+		if (cleanWord.equals(reversedWord)) {
+
+			System.out.println("Is palindrome");
 		}
 
 	}
