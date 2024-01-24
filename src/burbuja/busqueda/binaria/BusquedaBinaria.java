@@ -2,6 +2,7 @@ package burbuja.busqueda.binaria;
 
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class BusquedaBinaria {
@@ -9,7 +10,7 @@ public class BusquedaBinaria {
 	public static void main(String[] args) {
 
 		Random rand = new Random();
-		List<Integer> list = IntStream.generate(() -> rand.nextInt(100)).limit(100).boxed().sorted().toList();
+		List<Integer> list = IntStream.generate(() -> rand.nextInt(100)).limit(100).boxed().sorted().collect(Collectors.toList());
 		
 		list.forEach(System.out::println);
 		

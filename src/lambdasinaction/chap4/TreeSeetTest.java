@@ -25,9 +25,10 @@ public class TreeSeetTest {
 
 		@Override
 		public String toString() {
-			// TODO Auto-generated method stub
-			return name;
+			return name + " " + salary;
 		}
+
+	
 
 	}
 

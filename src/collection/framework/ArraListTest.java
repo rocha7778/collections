@@ -12,6 +12,7 @@ public class ArraListTest {
 		
 		
 		ArrayList<String> list = new ArrayList<>();
+		LinkedList<String> list2 = new LinkedList<>();
 		
 		
 		
