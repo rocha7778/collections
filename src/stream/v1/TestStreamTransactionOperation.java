@@ -95,6 +95,7 @@ public class TestStreamTransactionOperation {
 		
 		
 
+	System.out.println("Hola result from mapping");
 	System.out.println(hola);
 	
 	

@@ -36,6 +36,12 @@ public class CollectorToMap {
 		
 		System.out.println(booksbyYearRelease);
 		
+	Map<Integer, List<Book>> list =	bookList.stream().collect(Collectors.groupingBy(Book::getReleaseYear, Collectors.toList()));
+	
+	System.out.println(list);
+		
+		
+		
 
 	}
 
