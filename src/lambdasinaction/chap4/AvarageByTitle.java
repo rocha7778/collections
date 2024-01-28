@@ -34,7 +34,7 @@ public class AvarageByTitle {
 				  Entry::getKey,
 				  AvarageByTitle::calculateAverageSalary));
 
-		System.out.println(resultEntry);
+		System.out.println("promedio calcular" + resultEntry);
 		
 		Map<String, Float> resultEntry2 = employeByJobTitle.stream().collect(Collectors.toMap(entry -> entry.getKey(),
 

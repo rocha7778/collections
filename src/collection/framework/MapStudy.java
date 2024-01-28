@@ -1,6 +1,8 @@
 package collection.framework;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -10,6 +12,7 @@ public class MapStudy {
 		// TODO Auto-generated method stub
 
 		HashMap<Integer, String> map = new HashMap<Integer, String>();
+		Set<Integer> set = new HashSet<>();
 		
 		
 		map.put(1, "Casillas");
@@ -24,6 +27,8 @@ public class MapStudy {
 		map.put(6, "Iniesta");
 		map.put(7, "Villa");
 		map.put(null, null);
+		
+		
 		
 
 		System.out.println("Sixe of map: " + map.size());
