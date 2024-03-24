@@ -9,11 +9,9 @@ import java.util.Set;
 public class MapStudy {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		HashMap<Integer, String> map = new HashMap<Integer, String>();
 		Set<Integer> set = new HashSet<>();
-		
 		
 		map.put(1, "Casillas");
 		map.put(15, "Ramos");
@@ -27,9 +25,6 @@ public class MapStudy {
 		map.put(6, "Iniesta");
 		map.put(7, "Villa");
 		map.put(null, null);
-		
-		
-		
 
 		System.out.println("Sixe of map: " + map.size());
 		System.out.println("Content of HashMap: " + map);
@@ -46,8 +41,5 @@ public class MapStudy {
 		for (Entry<Integer, String> entry : mapEntry) {
 			System.out.println("Key : " + entry.getKey() + "  value: " + entry.getValue());
 		}
-		
-
 	}
-
 }
