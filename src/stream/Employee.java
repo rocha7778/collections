@@ -39,14 +39,14 @@ public class Employee {
 	}
 
 	public String getTitle() {
-		// TODO Auto-generated method stub
 		return title;
 	}
 	
+
+
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return title;
+		return "Employee [title=" + title + ", id=" + id + ", salary=" + salary + "]";
 	}
 
 	@Override

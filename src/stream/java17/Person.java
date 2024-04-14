@@ -25,6 +25,10 @@ public class Person {
 		this.income = income;
 	}
 
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -81,13 +85,20 @@ public class Person {
 		Person chris = new Person(4, "Chris", Gender.MALE, LocalDate.of(1993, Month.DECEMBER, 16), 1800.0);
 		Person laynie = new Person(5, "Laynie", Gender.FEMALE, LocalDate.of(2012, Month.DECEMBER, 13), 0.0);
 		Person lee = new Person(6, "Li", Gender.MALE, LocalDate.of(2001, Month.MAY, 9), 2400.0);
-		Person lee2 = new Person(6, "Li2", Gender.MALE, LocalDate.of(2001, Month.MAY, 9), 2500.0);
+		Person lee2 = new Person(7, "Li2", Gender.MALE, LocalDate.of(2001, Month.MAY, 9), 2500.0);
 		return List.of(ken, jeff, donna, chris, laynie, lee, lee2);
+	}
+	
+	void showPerson() {
+		
+		System.out.println("Mostrar persona");
 	}
 
 	@Override
 	public String toString() {
 		return String.format("(%s, %s, %s, %s, %.2f)", id, name, gender, dob, income);
 	}
+	
+
 
 }

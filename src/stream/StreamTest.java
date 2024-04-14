@@ -24,7 +24,7 @@ public class StreamTest {
 
 		List<Integer> list = Arrays.asList(1, 2, 3, 4, 1, 5, 3, 8, 20);
 
-		list.stream().mapToInt(Integer::new).distinct().forEach(System.out::println);
+		list.stream().mapToInt(Integer::valueOf).distinct().forEach(System.out::println);
 
 		List<String> colors = Arrays.asList("Red", "Green", "Blue", "Pink", "Brown");
 
@@ -33,13 +33,18 @@ public class StreamTest {
 
 		colors.stream().filter(str -> str.startsWith("B")).toList().forEach(System.out::println);
 
-		var resultMax = list.stream().mapToInt(Integer::new).max().getAsInt();
-		var resultMin = list.stream().mapToInt(Integer::new).min().getAsInt();
+		var resultMax = list.stream().mapToInt(Integer::valueOf).max().getAsInt();
+		var resultMin = list.stream().mapToInt(Integer::valueOf).min().getAsInt();
+		
+		System.out.println(resultMax);
+		System.out.println(resultMin);
 
 		record MaxMinNumber(int max, int min) {
 		}
-		var resultRecord = list.stream().collect(Collectors.teeing(Collectors.minBy(Integer::min),
-				Collectors.maxBy(Integer::max), (min, max) -> new MaxMinNumber(min.get(), max.get())));
+		var resultRecord = list.stream().collect(Collectors.teeing(
+				Collectors.minBy(Integer::min),
+				Collectors.maxBy(Integer::max), 
+				(min, max) -> new MaxMinNumber(min.get(), max.get())));
 
 		System.out.println(resultRecord);
 

@@ -24,11 +24,13 @@ public class PartitioningBy {
 
 		Map<Boolean, Dish> result3 = Dish.menu.stream().collect(Collectors.partitioningBy(Dish::isVegetarian, Collectors
 				.collectingAndThen(Collectors.maxBy(Comparator.comparing(Dish::getCalories)), Optional::get)));
+		System.out.println("REsult 3");
 		System.out.println(result3);
 
 		var result4 = Dish.menu.stream().collect(
 				Collectors.partitioningBy(Dish::isVegetarian, Collectors.partitioningBy(d -> d.getCalories() > 500)));
 
+		System.out.println("REsult 4");
 		System.out.println(result4);
 
 		var result5 = Dish.menu.stream().collect(Collectors.partitioningBy(Dish::isVegetarian, Collectors.counting()));

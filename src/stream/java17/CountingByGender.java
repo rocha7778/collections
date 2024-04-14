@@ -39,6 +39,18 @@ public class CountingByGender {
 		System.out.println("----------------------");
 		
 		
+		Map<Boolean, Object> peopleByGenderByMaxIncome2 =
+                Person.persons()
+                        .stream()
+                        .collect(Collectors.groupingBy(Person::isFemale,
+                                Collectors.collectingAndThen(
+                                        Collectors.maxBy(Comparator.comparing(Person::getIncome)),
+                                        Optional::get
+                                )));
+
+        System.out.println(peopleByGenderByMaxIncome2);
+		
+		
 	}
 
 }

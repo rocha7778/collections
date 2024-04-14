@@ -1,16 +1,17 @@
 package testcode;
 
 import java.util.List;
-import java.util.Optional;
 
 public class TestCode {
 
+	public record numberFound(Integer a, Integer b) {};
+	
 	public static void main(String[] args) {
 
 		List<Integer> list = List.of(3, 4, 8, 11, 19, 23);
 		int variable27 = 27;
 
-		calcular23(list, variable27);
+		calcularRecord(list, variable27);
 
 	}
 	
@@ -25,7 +26,18 @@ public class TestCode {
 		.ifPresent(pair -> {
 			System.out.println("primer valor " + pair[0]);
 		    System.out.println("segundo valor " + pair[1]);
+		    System.out.println("Valor Buscado " + valorBuscado);
 		});
+	}
+	
+	public static void calcularRecord(List<Integer> list, int valorBuscado) {
+		
+		list.stream()
+		.flatMap(i -> list.stream()
+				     .filter(j -> (i+j == valorBuscado)).map(j -> new numberFound(i,j)))
+		.findFirst()
+		.ifPresent(r -> System.out.println(r));
+		
 	}
 
 	public static void calcular(List<Integer> list, int valorBuscado) {
@@ -39,6 +51,7 @@ public class TestCode {
 				if (list.get(i) + list.get(j) == valorBuscado) {
 					System.out.println("primer valor " + list.get(i));
 					System.out.println("segundo valor " + list.get(j));
+					System.out.println("Valor Buscado " + valorBuscado);
 					return;
 				}
 			}

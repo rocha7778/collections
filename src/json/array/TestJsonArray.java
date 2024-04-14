@@ -35,6 +35,8 @@ public class TestJsonArray {
 		.map(obj -> new  JSONObject(obj))
 		.map(p -> new Person(p.getString("name"),  p.getInt("age"))).toList();
 		
+		
+		
 	}
 
 }
