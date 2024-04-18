@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		// TODO Auto-generated method stub
 		
-		MyShopV3 myShop = new MyShopV3("Rocha");
+		Threads.callable.v2.MyShopV3 myShop = new MyShopV3("Rocha");
 		Consumer<Object> println = System.out::println;
 		
 		long start = System.nanoTime();
