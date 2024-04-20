@@ -3,7 +3,6 @@ package thread.test;
 public class LoopTestMain {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 
 		int numThreads = 5;
 

@@ -25,6 +25,9 @@ public class StreamBasic {
 
 		// Java 8
 		getLowCaloricDishesNamesInJava8(Dish.menu).forEach(System.out::println);
+		
+		int result = Dish.menu.stream().map(d -> d.getCalories()).reduce(0, (c1,c2) -> c1+c2);
+		System.out.println(result);
 
 		Map<CaloricLevel, List<Dish>> dishesByCaloricLevel =
 				Dish.menu.stream().collect(groupingBy(dish -> {

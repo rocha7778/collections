@@ -1,5 +1,8 @@
 package generic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExampleExtendGeneric {
 
 	public static void main(String[] args) {
@@ -10,7 +13,9 @@ public class ExampleExtendGeneric {
 		
 		Double result = numbersWrapper.get().doubleValue();
 		
-		System.out.println("Result ---> " +result);
+		//System.out.println("Result ---> " +result);
+		
+		new Exception();
 		
 		
 		
@@ -22,6 +27,16 @@ public class ExampleExtendGeneric {
 		Test<String> hola = new Test<String>("Hola");
 		
 		hola.m1(integer, wrapperInt2, "Hola2");
+		
+		
+		
+		WrapperUtil.process(new Wrapper<Long>(10L), new Wrapper<Long>(20L), new Wrapper<Long>(30L));
+		
+		List<Number> list1 = new ArrayList<>();
+		List<Long> list2 = new ArrayList<>();
+		
+		//list1 = list2; // compile exception list<a> is not a list<b>
+		
 		
 
 	}

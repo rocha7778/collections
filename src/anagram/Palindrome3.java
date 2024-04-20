@@ -1,5 +1,6 @@
 package anagram;
 
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -20,6 +21,22 @@ public class Palindrome3 {
 
         System.out.println("Merged and sorted list: " + mergedAndSorted);
 
+	}
+	
+	public static void isPalindrome2(String word) {
+		
+		String cleanedWord = word.chars()
+		.filter(c -> !Character.isWhitespace(c))
+		.filter(c -> !Character.isAlphabetic(c))
+		.mapToObj(n -> (char) n)
+		.map(Object::toString)
+		.collect(Collectors.joining());
+		
+		StringBuilder sb = new StringBuilder(cleanedWord);
+		
+		if(sb.reverse().toString().equalsIgnoreCase(cleanedWord)) {
+			System.out.println("Palandrome");
+		}
 	}
 
 	public static void isPalindrome(String word) {

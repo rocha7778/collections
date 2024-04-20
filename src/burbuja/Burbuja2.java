@@ -3,7 +3,6 @@ package burbuja;
 public class Burbuja2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		int[] numbers = { 4, 8, 9, 7, 3, 0, 1, 5 };
 
