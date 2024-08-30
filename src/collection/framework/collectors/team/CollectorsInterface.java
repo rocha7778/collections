@@ -19,6 +19,31 @@ public class CollectorsInterface {
 		List<Dish> list = Dish.menu.stream().collect(new CollectorsInterfaceTest<>());
 		List<Dish> list2 = Dish.menu.stream().collect(ArrayList::new, List::add, List::addAll);
 		
+		var totalCalorics = Dish
+				.menu
+				.stream()
+				.collect(Collectors.summingInt(Dish::getCalories));
+		
+		var totalCalories = Dish
+				.menu
+				.stream()
+				.collect(Collectors.reducing(0, Dish::getCalories, Integer::sum));
+		
+		
+		var totalCalories2 = Dish
+				.menu
+				.stream()
+				.mapToInt(Dish::getCalories).sum();
+		
+		
+		var menuNames = Dish
+				.menu
+				.stream()
+				.map(Dish::getName)
+				.collect(Collectors.joining(","));
+		
+		System.out.println("menuNames: " +menuNames);
+		
 		Dish.menu.stream().collect(Collectors.groupingBy(Dish::getType)).forEach((k,l) ->System.out.println("Type: "+k+" - "+l));
 		
 		System.out.println("");

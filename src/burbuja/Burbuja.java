@@ -13,7 +13,14 @@ public class Burbuja {
 			System.out.println(numbers[i]);
 		}
 		
+		String ITEM_DESCRIPTION_PATH = "/items/%s/description";
+		String formattedPath = String.format(ITEM_DESCRIPTION_PATH, "MLA833493647");
+
+		System.out.println(formattedPath);
 		
+		String name = "JavaConceptOfTheDay".substring(4);
+        
+        System.out.println(name);
 
 	}
 

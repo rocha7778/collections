@@ -39,7 +39,9 @@ public class PrimeNumbersCollector
 		double candidateRoot = Math.sqrt((double) candidate);
 		// return takeWhile(primes, i -> i <= candidateRoot).stream().noneMatch(i ->
 		// candidate % i == 0);
-		return primes.stream().takeWhile(i -> i <= candidateRoot).noneMatch(i -> candidate % i == 0);
+		return primes.stream()
+				.takeWhile(i -> i <= candidateRoot)
+				.noneMatch(i -> candidate % i == 0);
 	}
 
 	@Override

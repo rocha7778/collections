@@ -2,11 +2,13 @@ package generic;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observer;
 
 public class ExampleExtendGeneric {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Observer o;
 		
 		Wrapper<Integer> integer = new Wrapper<Integer>(Integer.valueOf(10));
 		Wrapper<? extends Number> numbersWrapper = integer;

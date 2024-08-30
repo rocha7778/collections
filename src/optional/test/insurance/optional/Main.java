@@ -13,7 +13,10 @@ public class Main {
 
 		Optional<Person> person = Optional.of(p);
 
-		String insuranceNamce = person.flatMap(Person::getCar).flatMap(Car::getInsurance).map(Insurance::getName)
+		String insuranceNamce = person
+				.flatMap(Person::getCar)
+				.flatMap(Car::getInsurance)
+				.map(Insurance::getName)
 				.orElse("Unknow");
 
 		System.out.println(insuranceNamce);

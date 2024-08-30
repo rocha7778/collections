@@ -1,6 +1,5 @@
 package stream.v3;
 
-import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.stream.Stream;
 

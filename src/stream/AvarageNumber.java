@@ -3,7 +3,9 @@ package stream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BinaryOperator;
+import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class AvarageNumber {
 
@@ -12,6 +14,19 @@ public class AvarageNumber {
 
 		
 		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5,1,2);
+		
+		var total = list.stream().reduce(0, (a,b) -> a + b);
+		var total2 = list.stream().reduce(0, Integer::sum);
+		
+		var total3 = list.stream().collect(Collectors.reducing(0, Function.identity(), (i,j) -> i+j));
+		
+		System.out.println("Total3 ROCHA"+total3);
+		
+		var max = list.stream().reduce(Integer::max);
+		
+		System.out.println("total: " + total);
+		System.out.println("total2: " + total2);
+		System.out.println("max : " + max);
 
 		Double avg = list.stream().mapToDouble(Integer::doubleValue).average().orElse(0);
 

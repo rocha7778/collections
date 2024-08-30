@@ -14,6 +14,7 @@ public class MyShop {
 		System.out.println("Invocation returned after " + retrievalTime + " msecs");
 
 		System.out.println("number of core" + Runtime.getRuntime().availableProcessors());
+		
 	}
 
 	private static List<String> findPrices(String productName) {

@@ -1,6 +1,7 @@
 package stream.java17;
 
 import java.util.Comparator;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
@@ -21,7 +22,27 @@ public class GroupingBy {
 				        		)
 				        ));
 		
+		Map<Gender,List<Person>> groupPersonByGender = Person.persons()
+				.stream()
+				.collect(Collectors.groupingBy(Person::getGender));
 		
+		System.out.println("Rocha Gender");
+		System.out.println("Rocha Gender");
+		
+		groupPersonByGender.forEach((k,v) -> System.out.println("Gender: " + k + " Persons" + v.toString()));
+		
+		
+		
+		
+		Map<Gender,List<String>> groupPersonNameByGender = Person.persons()
+				.stream()
+				.collect(Collectors.groupingBy(Person::getGender,
+						Collectors.mapping(Person::getName, Collectors.toList())));
+		
+		System.out.println("Rocha Name");
+		System.out.println("Rocha Name");
+		
+		groupPersonNameByGender.forEach((k,v) -> System.out.println("Gender: " + k + " Persons" + v.toString()));
 		
 		
 		Map<Gender, Person> result2 = Person.persons()

@@ -1,7 +1,15 @@
 package Threads.callable.v3.third.part;
 
 public class Discount {
+	
 
+	enum Level {
+		LOW,
+		MEDIUM,
+		HIGHT
+	}
+	
+	
 	public enum Code {
 		NONE(0), SILVER(5), GOLD(10), PLATINUM(15), DIAMOND(20);
 
